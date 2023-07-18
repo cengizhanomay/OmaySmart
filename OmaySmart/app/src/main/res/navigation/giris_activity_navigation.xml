@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/giris_activity_navigation"
+    app:startDestination="@id/girisFragment">
+
+    <fragment
+        android:id="@+id/girisFragment"
+        android:name="com.omaysoftware.omaysmart.fragment.GirisFragment"
+        android:label="fragment_giris"
+        tools:layout="@layout/fragment_giris" >
+        <action
+            android:id="@+id/action_girisFragment_to_izinlerFragment"
+            app:destination="@id/izinlerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/izinlerFragment"
+        android:name="com.omaysoftware.omaysmart.fragment.IzinlerFragment"
+        android:label="fragment_izinler"
+        tools:layout="@layout/fragment_izinler" />
+</navigation>

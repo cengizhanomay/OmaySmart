@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "81760958351",
+    "project_id": "omaysmartdatabase",
+    "storage_bucket": "omaysmartdatabase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:81760958351:android:54bccc9a978788f2427dfa",
+        "android_client_info": {
+          "package_name": "com.omaysoftware.omaysmart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "81760958351-09pf5le7nsr1fjl35odga3jtbb8sp1gf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.omaysoftware.omaysmart",
+            "certificate_hash": "1be8ede044790f40bbb6d9a90f3b6e0e4a9e219e"
+          }
+        },
+        {
+          "client_id": "81760958351-konpnpbbbn5d2p2r4ov36sedvfjmdf4f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBY28RD-Dvq5EdPzA-LwC7WelJRkgfjsfs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "81760958351-konpnpbbbn5d2p2r4ov36sedvfjmdf4f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

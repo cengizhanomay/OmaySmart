@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.EslestirmeKontrolFragment">
+
+    <ProgressBar
+        android:id="@+id/progressBarEslestirmeKontrol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutMEToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/koyu_mavi"
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/imageViewEslestirmeKontrolGeri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/back_white_icon"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/textViewEKToolbarIsim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:gravity="center"
+            android:letterSpacing="0.05"
+            android:text="@string/demo_text"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:ignore="RelativeOverlap" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutEslestirmeKontrol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:visibility="visible"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewEslestirmeKontrol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:letterSpacing="0.05"
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:text="@string/text_eslestirmekontrol_bilgi" />
+
+        <Button
+            android:id="@+id/buttonEslestirmeKontrol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:letterSpacing="0.1"
+            android:text="@string/button_wifiagbilgileri"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+</RelativeLayout>

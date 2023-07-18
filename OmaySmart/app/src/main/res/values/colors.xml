@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!--Keni Renklerim-->
+    <color name="koyu_mavi">#03577b</color>
+    <color name="gif_turkuaz">#33cccc</color>
+    <color name="logo_orta_mavi">#24a9b5</color>
+    <color name="indicator_mavi">#d4f0fc</color>
+    <color name="online_yesil">#008000</color>
+    <color name="offline_kirmizi">#ff0000</color>
+</resources>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cihaz_ekle_fragment_navigation"
+    app:startDestination="@id/eslestirmeSecimFragment">
+
+    <fragment
+        android:id="@+id/eslestirmeSecimFragment"
+        android:name="com.omaysoftware.omaysmart.fragment.EslestirmeSecimFragment"
+        android:label="fragment_eslestirme_secim"
+        tools:layout="@layout/fragment_eslestirme_secim">
+        <action
+            android:id="@+id/action_eslestirmeSecimFragment_to_otomatikEslestirmeFragment"
+            app:destination="@id/otomatikEslestirmeFragment" />
+        <action
+            android:id="@+id/action_eslestirmeSecimFragment_to_manuelEslestirmeFragment"
+            app:destination="@id/manuelEslestirmeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/qrKodOkuFragment"
+        android:name="com.omaysoftware.omaysmart.fragment.QrKodOkuFragment"
+        android:label="fragment_qr_kod_oku"
+        tools:layout="@layout/fragment_qr_kod_oku">
+        <argument
+            android:name="gelinenFragment"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_qrKodOkuFragment_to_manuelEslestirmeFragment"
+            app:destination="@id/manuelEslestirmeFragment" />
+        <action
+            android:id="@+id/action_qrKodOkuFragment_to_eslestirmeKontrolFragment"
+            app:destination="@id/eslestirmeKontrolFragment" />
+        <action
+            android:id="@+id/action_qrKodOkuFragment_to_eslestirmeEkleFragment"
+            app:destination="@id/eslestirmeEkleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/manuelEslestirmeFragment"
+        android:name="com.omaysoftware.omaysmart.fragment.ManuelEslestirmeFragment"
+        android:label="fragment_manuel_eslestirme"
+        tools:layout="@layout/fragment_manuel_eslestirme">
+        <argument
+            android:name="cihazSecim"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_manuelEslestirmeFragment_to_qrKodOkuFragment"
+            app:destination="@id/qrKodOkuFragment" />
+        <action
+            android:id="@+id/action_manuelEslestirmeFragment_to_cihazKaydetFragment"
+            app:destination="@id/cihazKaydetFragment" />
+        <argument
+            android:name="cihazId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_manuelEslestirmeFragment_to_wifiAgBilgileriFragment"
+            app:destination="@id/wifiAgBilgileriFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/otomatikEslestirmeFragment"
+        android:name="com.omaysoftware.omaysmart.fragment.OtomatikEslestirmeFragment"
+        android:label="fragment_otomatik_eslestirme"
+        tools:layout="@layout/fragment_otomatik_eslestirme">
+        <action
+            android:id="@+id/action_otomatikEslestirmeFragment_to_qrKodOkuFragment"
+            app:destination="@id/qrKodOkuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/wifiAgBilgileriFragment"
+        android:name="com.omaysoftware.omaysmart.fragment.WifiAgBilgileriFragment"
+        android:label="fragment_wifi_ag_bilgileri"
+        tools:layout="@layout/fragment_wifi_ag_bilgileri">
+        <action
+            android:id="@+id/action_wifiAgBilgileriFragment_to_cihazKaydetFragment"
+            app:destination="@id/cihazKaydetFragment" />
+        <argument
+            android:name="cihazId"
+            app:argType="string" />
+        <argument
+            android:name="cihazWifiAdi"
+            app:argType="string" />
+        <argument
+            android:name="cihazTur"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_wifiAgBilgileriFragment_to_eslestirmeKontrolFragment"
+            app:destination="@id/eslestirmeKontrolFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cihazKaydetFragment"
+        android:name="com.omaysoftware.omaysmart.fragment.CihazKaydetFragment"
+        android:label="fragment_cihaz_kaydet"
+        tools:layout="@layout/fragment_cihaz_kaydet">
+        <argument
+            android:name="secilenWifiAgAdi"
+            app:argType="string" />
+        <argument
+            android:name="secilenWifiAgSifre"
+            app:argType="string" />
+        <argument
+            android:name="cihazWifiAdi"
+            app:argType="string" />
+        <argument
+            android:name="cihazId"
+            app:argType="string" />
+        <argument
+            android:name="cihazTur"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/eslestirmeKontrolFragment"
+        android:name="com.omaysoftware.omaysmart.fragment.EslestirmeKontrolFragment"
+        android:label="fragment_eslestirme_kontrol"
+        tools:layout="@layout/fragment_eslestirme_kontrol" >
+        <action
+            android:id="@+id/action_eslestirmeKontrolFragment_to_wifiAgBilgileriFragment"
+            app:destination="@id/wifiAgBilgileriFragment" />
+        <argument
+            android:name="cihazId"
+            app:argType="string" />
+        <argument android:name="cihazWifiAdi" />
+        <argument android:name="cihazTur" />
+        <action
+            android:id="@+id/action_eslestirmeKontrolFragment_to_cihazKaydetFragment"
+            app:destination="@id/cihazKaydetFragment" />
+        <argument
+            android:name="gelinenFragment"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_eslestirmeKontrolFragment_to_qrKodOkuFragment"
+            app:destination="@id/qrKodOkuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/eslestirmeEkleFragment"
+        android:name="com.omaysoftware.omaysmart.fragment.EslestirmeEkleFragment"
+        android:label="fragment_eslestirme_ekle"
+        tools:layout="@layout/fragment_eslestirme_ekle" >
+        <argument
+            android:name="cihazId"
+            app:argType="string" />
+        <argument
+            android:name="cihazWifiAdi"
+            app:argType="string" />
+        <argument
+            android:name="cihazTur"
+            app:argType="string" />
+    </fragment>
+</navigation>

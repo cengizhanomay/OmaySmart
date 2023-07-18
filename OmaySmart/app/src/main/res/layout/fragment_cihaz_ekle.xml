@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.CihazEkleFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            tools:ignore="UseCompoundDrawables">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:letterSpacing="0.05"
+                android:text="@string/text_qrkod_bilgi_CEF"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/imageViewCEFQrKod"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/qrcode_scan_phone"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:layout_margin="10dp"
+            android:background="@color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:letterSpacing="0.05"
+                android:text="@string/text_normalesles_CEF"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <!--Cihazlar Satırları-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        tools:ignore="UselessParent">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="10dp"
+                            android:orientation="vertical"
+                            tools:ignore="UseCompoundDrawables">
+
+                            <ImageView
+                                android:id="@+id/imageViewCEFOnlineMama"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="5dp"
+                                app:srcCompat="@drawable/ic_launcher_background"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="5dp"
+                                android:letterSpacing="0.05"
+                                android:gravity="center"
+                                android:text="@string/text_normal_ONMK" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:orientation="vertical"
+                            tools:ignore="UseCompoundDrawables">
+
+                            <ImageView
+                                android:id="@+id/imageViewCEFOfflineMama"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="5dp"
+                                app:srcCompat="@drawable/ic_launcher_background"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="5dp"
+                                android:letterSpacing="0.05"
+                                android:gravity="center"
+                                android:text="@string/text_normal_OFFMK" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.WifiAgBilgileriFragment">
+
+    <ProgressBar
+        android:id="@+id/progressBarWifiAgBilgileri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutWABToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/koyu_mavi"
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/imageViewWABGeri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/back_white_icon"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/textViewWABToolbarIsim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:gravity="center"
+            android:letterSpacing="0.05"
+            android:text="@string/demo_text"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:ignore="RelativeOverlap" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutWifiList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearLayoutWifiBilgileri"
+        android:layout_below="@+id/relativeLayoutWABToolbar"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:letterSpacing="0.05"
+            android:text="@string/text_ustbilgi_WAB"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayoutWifiAgBilgileri"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewWifiAgBilgileri"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutWifiBilgileri"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:background="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:letterSpacing="0.05"
+            android:text="@string/text_agbilgi"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTextWifiSSID"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:background="@drawable/wifi_ag_bilgileri_selector"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:drawableStart="@drawable/wifi_icon_selector"
+            android:drawablePadding="10dp"
+            android:focusable="false"
+            android:hint="@string/hint_wifi_ssid"
+            android:inputType="none"
+            android:letterSpacing="0.05"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            tools:ignore="Autofill" />
+
+        <EditText
+            android:id="@+id/editTextWifiPassword"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:background="@drawable/wifi_ag_bilgileri_selector"
+            android:digits="1234567890abcdefghijklmnoprstuvyzABCDEFGHIJKLMNOPRSTUVYZ*@^:,$!`-#%+?'~_=.{[(}]);/|"
+            android:drawableStart="@drawable/password_icon_selector"
+            android:drawablePadding="10dp"
+            android:hint="@string/hint_wifi_password"
+            android:inputType="textNoSuggestions"
+            android:letterSpacing="0.05"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            tools:ignore="Autofill,TextFields" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:background="@color/black" />
+
+        <Button
+            android:id="@+id/buttonWifiAgBilgileriIleri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:letterSpacing="0.1"
+            android:text="@string/button_wifiagbilgileri"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+</RelativeLayout>

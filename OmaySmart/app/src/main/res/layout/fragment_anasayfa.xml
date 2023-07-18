@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.AnasayfaFragment">
+
+    <ProgressBar
+        android:id="@+id/progressBarAnasayfa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textViewAnasayfa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:letterSpacing="0.05"
+        android:text="@string/text_anasayfa_bilgi"
+        android:textSize="16sp"
+        android:visibility="invisible" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayoutAnasayfa"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewAnasayfa"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</FrameLayout>

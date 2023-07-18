@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cihaz_listesi_fragment_navigation"
+    app:startDestination="@id/cihazListesiFragment">
+
+    <fragment
+        android:id="@+id/cihazListesiFragment"
+        android:name="com.omaysoftware.omaysmart.fragment.CihazListesiSecimFragment"
+        android:label="fragment_cihaz_listesi"
+        tools:layout="@layout/fragment_cihaz_listesi_secim" >
+        <action
+            android:id="@+id/action_cihazListesiFragment_to_onlineMamaKabiFragment"
+            app:destination="@id/onlineMamaKabiFragment2" />
+        <action
+            android:id="@+id/action_cihazListesiFragment_to_offlineMamaKabiFragment"
+            app:destination="@id/offlineMamaKabiFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/onlineMamaKabiFragment2"
+        android:name="com.omaysoftware.omaysmart.fragment.OnlineMamaKabiFragment"
+        android:label="fragment_online_mama_kabi"
+        tools:layout="@layout/fragment_online_mama_kabi" >
+        <argument
+            android:name="cihazId"
+            app:argType="string" />
+        <argument
+            android:name="cihazIsim"
+            app:argType="string" />
+        <argument
+            android:name="cihazWifiAdi"
+            app:argType="string" />
+        <argument
+            android:name="cihazTur"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/offlineMamaKabiFragment2"
+        android:name="com.omaysoftware.omaysmart.fragment.OfflineMamaKabiFragment"
+        android:label="fragment_offline_mama_kabi"
+        tools:layout="@layout/fragment_offline_mama_kabi" >
+        <argument
+            android:name="cihazId"
+            app:argType="string" />
+        <argument
+            android:name="cihazIsim"
+            app:argType="string" />
+        <argument
+            android:name="cihazWifiAdi"
+            app:argType="string" />
+        <argument
+            android:name="cihazTur"
+            app:argType="string" />
+    </fragment>
+</navigation>

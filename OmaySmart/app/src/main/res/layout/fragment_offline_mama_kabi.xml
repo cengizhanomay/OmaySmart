@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.OfflineMamaKabiFragment">
+
+    <WebView
+        android:id="@+id/webViewOfflineMamaKabi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/progressBarOfflineMamaKabi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutOfflineMamaToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/koyu_mavi"
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/imageViewOfflineMamaGeri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/back_white_icon"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/textViewOfflineMamaToolbarIsim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@id/imageViewOfflineMamaGeri"
+            android:gravity="center"
+            android:letterSpacing="0.05"
+            android:text="@string/demo_text"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            tools:ignore="RelativeOverlap" />
+
+        <ImageView
+            android:id="@+id/imageViewOfflineMamaEkle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:layout_toStartOf="@id/imageViewOfflineMamaMenu"
+            app:srcCompat="@drawable/add_line_wihte_icon"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/imageViewOfflineMamaMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/menu_white_icon"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutOfflineMamaSaatler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relativeLayoutOfflineMamaToolbar"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/textViewOfflineMamaKabiBilgi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:letterSpacing="0.05"
+            android:text="@string/text_onlinemamakabi_saatbilgi"
+            android:textSize="14sp"
+            android:visibility="invisible" />
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            android:layout_margin="5dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewOfflineMamaKabi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutCihazBaglanmadi"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/relativeLayoutOfflineMamaToolbar"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewOFMKCihazBaglanmadi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:letterSpacing="0.05"
+                android:text="Cihaza bağlanma sırasında bir hata oluştu. Lütfen tekrar deneyiniz."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/buttonOFMKYenidenBaglan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:letterSpacing="0.1"
+                android:text="Yeniden Bağlan"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

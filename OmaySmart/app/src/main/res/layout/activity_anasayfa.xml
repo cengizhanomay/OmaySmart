@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AnasayfaActivity">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerViewAnasayfa"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/animatedBottomBarAnasayfa"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/anasayfa_activity_navigation" />
+
+    <nl.joery.animatedbottombar.AnimatedBottomBar
+        android:id="@+id/animatedBottomBarAnasayfa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/koyu_mavi"
+        app:abb_selectedTabType="text"
+        app:abb_tabColor="@color/white"
+        app:abb_tabColorSelected="@color/white"
+        app:abb_textSize="15sp"
+        app:abb_iconSize="28dp"
+        app:abb_indicatorColor="@color/indicator_mavi"
+        app:abb_indicatorHeight="5dp"
+        app:abb_indicatorMargin="2dp"
+        app:abb_indicatorAppearance="round"
+        app:abb_badgeAnimation="scale"
+        app:abb_selectedIndex="1"
+        app:abb_textStyle="bold"
+        app:abb_tabs="@menu/anasayfa_activity_menu" />
+</RelativeLayout>

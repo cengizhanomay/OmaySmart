@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/itemEslestirme"
+        android:icon="@drawable/adddevice_black_icon"
+        android:title="@string/item_eslestirme_title_menu" />
+    <item
+        android:id="@+id/itemEdit"
+        android:icon="@drawable/edit_black_icon"
+        android:title="@string/item_edit_title_menu" />
+    <item
+        android:id="@+id/itemDelete"
+        android:icon="@drawable/delete_black_icon"
+        android:title="@string/item_delete_title_menu" />
+</menu>

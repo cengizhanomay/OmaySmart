@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.ManuelEslestirmeFragment">
+
+    <ProgressBar
+        android:id="@+id/progressBarManuelEslestirme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutMEToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/koyu_mavi"
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/imageViewMEGeri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/back_white_icon"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/textViewMEToolbarIsim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:gravity="center"
+            android:letterSpacing="0.05"
+            android:text="@string/demo_text"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:ignore="RelativeOverlap" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutManuelEslestirmeUst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relativeLayoutMEToolbar"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editTextCihazId"
+                android:layout_width="250dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/manuel_eslestirme_selector"
+                android:digits="1234567890abcdefghijklmnoprstuvyz-"
+                android:drawableStart="@drawable/edittext_icon_selector"
+                android:drawablePadding="10dp"
+                android:hint="@string/hint_manueleslestirme"
+                android:inputType="textNoSuggestions"
+                android:letterSpacing="0.05"
+                android:maxLength="36"
+                android:textSize="14sp"
+                tools:ignore="Autofill" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:letterSpacing="0.05"
+                android:text="@string/text_manueleslestirme_veya"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/imageViewManuelEslestirme"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:contentDescription="@string/description_manueleslestirme"
+                app:srcCompat="@drawable/qrcode_scan" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="@color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutManuelEslestirmeAlt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/linearLayoutManuelEslestirmeUst"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:letterSpacing="0.05"
+            android:text="@string/text_manueleslestirme_bilgi"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/linearLayoutManuelEslestirmeKontrol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:visibility="invisible"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewMEKontrol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:letterSpacing="0.05"
+                    android:textSize="16sp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:text="@string/text_eslestirmekontrolmanuel_bilgi" />
+
+                <Button
+                    android:id="@+id/buttonManuelEslestirmeKontrol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:letterSpacing="0.1"
+                    android:text="@string/button_eslestirmekontrolmanuel"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipeRefreshLayoutManuelEslestirme"
+                android:layout_width="match_parent"
+                android:visibility="invisible"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewManuelEslestirme"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

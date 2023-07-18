@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Omay Smart</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--Kendi Eklediklerim-->
+    <string name="item_add_title_menu">CİHAZ EKLE</string>
+    <string name="item_home_title_menu">CİHAZLARIM</string>
+    <string name="item_info_title_menu">BİLGİ</string>
+    <string name="text_normal_ONMK">Online Mama Kabı</string>
+    <string name="text_normal_OFFMK">Offline Mama Kabı</string>
+    <string name="text_qrkod_bilgi_CEF">Cihazı Otomatik Aramak İçin Lütfen QR Kodu Okutunuz</string>
+    <string name="text_normalesles_CEF">Cihazı Otomatik Ararken Sorun Yaşıyorsanız Lütfen Manuel Olarak Cihazınızı Seçin</string>
+    <string name="text_ustbilgi_WAB">Lütfen Evinizin Ağını Seçiniz</string>
+    <string name="text_agbilgi">Ağ Bilgileri</string>
+    <string name="text_manueleslestirme_bilgi">Lütfen Eşleştirmek İstediğiniz Cihazı Seçiniz</string>
+    <string name="description_manueleslestirme">Qr Kodu Okutmak İçin Tıklayınız</string>
+    <string name="text_manueleslestirme_veya">veya</string>
+    <string name="hint_manueleslestirme">Lütfen Cihazın ID bilgisini giriniz</string>
+    <string name="demo_text">OmaySmart</string>
+    <string name="hint_wifi_ssid">Lütfen Wifi Ağ Adınızı Seçin</string>
+    <string name="hint_wifi_password">Lütfen Wifi Ağ Şifrenizi Girin</string>
+    <string name="button_wifiagbilgileri">İleri</string>
+    <string name="button_cihazkaydet">Bitir</string>
+    <string name="text_anasayfa_bilgi">Herhangi bir cihaz eşleştirmediniz. Cihaz eklemek için lütfen cihaz ekleme sayfasına gidiniz.</string>
+    <string name="item_eslestirme_title_menu">Eşleştirme Ekle</string>
+    <string name="item_edit_title_menu">Düzenle</string>
+    <string name="item_delete_title_menu">Sil</string>
+    <string name="text_eslestirmekontrol_bilgi">Lütfen Cihazın Eşleştirme Modunda Olduğundan Emin Olduktan Sonra İleri Butonuna Basınız</string>
+    <string name="text_eslestirmekontrolmanuel_bilgi">Lütfen Cihazın Eşleştirme Modunda Olduğundan Emin Olduktan Sonra Yenile Butonuna Basınız</string>
+    <string name="button_eslestirmekontrolmanuel">Yenile</string>
+    <string name="text_izinler_izinver">İzin Ver</string>
+    <string name="text_izinler_konum">Konum</string>
+    <string name="text_izinler_kamera">Kamera</string>
+    <string name="text_izinler_baslik">Uygulama İzinleri</string>
+    <string name="text_izinler_aciklama">Uygulamayı kullanabilmek için lütfen gerekli izinleri onaylayınız</string>
+    <string name="text_izinler_konumbilgi">Cihaz eşleştirme modunda olduğunda cihazı bulabilmek için gereklidir</string>
+    <string name="text_izinler_kamerabilgi">Cihazı eşleştirirken QR Kodu okutmak için gereklidir</string>
+    <string name="text_izinler_uyari">Sadece uygulama açıkken kullanılır</string>
+    <string name="button_onlinemamakabi_mamaver">Mama Ver</string>
+    <string name="text_onlinemamakabi_mamasaat">Mama Saatleri</string>
+    <string name="text_onlinemamakabi_saatbilgi">Mama saati eklemediniz. Eklemek için lütfen artı butonuna basınız</string>
+    <string name="text_rowmamasaati_porsiyon">Porsiyon :</string>
+</resources>

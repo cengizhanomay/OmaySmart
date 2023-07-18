@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.OnlineMamaKabiFragment">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutOnlineMamaToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/koyu_mavi"
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/imageViewOnlineMamaGeri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/back_white_icon"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/textViewOnlineMamaToolbarIsim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:gravity="center"
+            android:letterSpacing="0.05"
+            android:text="@string/demo_text"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:ignore="RelativeOverlap" />
+
+        <ImageView
+            android:id="@+id/imageViewOnlineMamaMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/menu_white_icon"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/viewOnlineMamaKabi"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@id/relativeLayoutOnlineMamaToolbar"
+        android:background="@color/offline_kirmizi" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutOnlineMamaKabi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewOnlineMamaKabi"
+        android:layout_marginTop="5dp">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutOnlineMamaKabi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/buttonOnlineMamaKabi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:text="@string/button_onlinemamakabi_mamaver"
+                android:textAllCaps="false" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/materialCardViewOnlineMamaKabi"
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:layout_centerInParent="true"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="1dp"
+                    app:strokeColor="@color/black"
+                    app:strokeWidth="2dp">
+
+                    <ImageView
+                        android:id="@+id/imageViewOnlineMamaKabi"
+                        android:layout_width="200dp"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/image_512"
+                        tools:ignore="ContentDescription" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <ImageView
+                    android:id="@+id/imageViewOnlineMamaRefresh"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/materialCardViewOnlineMamaKabi"
+                    app:srcCompat="@drawable/refresh_black_icon"
+                    tools:ignore="ContentDescription" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutOnlineMamaZaman"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/linearLayoutOnlineMamaKabi">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:background="@color/koyu_mavi"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:letterSpacing="0.05"
+                    android:text="@string/text_onlinemamakabi_mamasaat"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    tools:ignore="RelativeOverlap" />
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                app:cardBackgroundColor="@color/koyu_mavi"
+                app:cardCornerRadius="20dp">
+
+                <ImageView
+                    android:id="@+id/imageViewOnlineMamaEkle"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/add_line_wihte_icon"
+                    tools:ignore="ContentDescription" />
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relativeLayoutOnlineMamaZaman">
+
+            <TextView
+                android:id="@+id/textViewOnlineMamaKabiBilgi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:letterSpacing="0.05"
+                android:text="@string/text_onlinemamakabi_saatbilgi"
+                android:textSize="14sp"
+                android:visibility="visible" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewOnlineMamaKabi"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
